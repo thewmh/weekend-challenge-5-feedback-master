@@ -11,6 +11,87 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br/>
+          {/* START Page 1 */}
+          <div id="feeling-page">
+            <div className="page-count">
+              1 of 4 pages
+              <div className="progress-bar">
+              </div>
+            </div>
+            <div id="feeling-card" className="card">
+              <div id="feeling-form" className="form">
+                <form>
+                  <label>How are you feeling today?</label>
+                  <input />
+                </form>
+              </div>
+                <div><button>Next</button></div>
+              </div>
+            </div>
+            {/* END Page 1 */}
+          {/* START Page 2 */}
+          <div id="understanding-page">
+            <div className="page-count">
+              2 of 4 pages
+              <div className="progress-bar">
+              </div>
+            </div>
+            <div id="understanding-card" className="card">
+              <div id="understanding-form" className="form">
+                <form>
+                  <label>How well are you understanding the content?</label>
+                  <input />
+                </form>
+              </div>
+                <div><button>Next</button></div>
+              </div>
+            </div>
+            {/* END Page 2 */}
+          {/* START Page 3 */}
+          <div id="supported-page">
+            <div className="page-count">
+              3 of 4 pages
+              <div className="progress-bar">
+              </div>
+            </div>
+            <div id="supported-card" className="card">
+              <div id="supported-form" className="form">
+                <form>
+                  <label>How well are you being supported?</label>
+                  <input />
+                </form>
+              </div>
+                <div><button>Next</button></div>
+              </div>
+            </div>
+            {/* END Page 3 */}
+          {/* START Page 4 */}
+          <div id="comments-page">
+            <div className="page-count">
+              4 of 4 pages
+              <div className="progress-bar">
+              </div>
+            </div>
+            <div id="comments-card" className="card">
+              <div id="comments-form" className="form">
+                <form>
+                  <label>Any Comments you want to leave?</label>
+                  <input />
+                </form>
+              </div>
+                <div><button>Next</button></div>
+              </div>
+            </div>
+            {/* END Page 4 */}
+          {/* START Page 5 */}
+          <div id="thankYou-page">
+            <div>
+                Thank You!
+                <div><button>Leave New Feedback</button></div>
+              </div>
+            </div>
+            {/* END Page 5 */}
+            
       </div>
     );
   }
