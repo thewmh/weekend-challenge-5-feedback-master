@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
 
 class App extends Component {
   render() {
@@ -14,24 +15,7 @@ class App extends Component {
         </header>
         <br/>
         <Feeling />
-          {/* START Page 2 */}
-          <div id="understanding-page" className="wrap">
-            <div className="page-count">
-              2 of 4 pages
-              <div className="progress-bar">
-              </div>
-            </div>
-            <div id="understanding-card" className="card">
-              <div id="understanding-form" className="form">
-                <form>
-                  <label>How well are you understanding the content?</label>
-                  <input />
-                </form>
-              </div>
-                <div><button>Next</button></div>
-              </div>
-            </div>
-            {/* END Page 2 */}
+        <Understanding />
           {/* START Page 3 */}
           <div id="supported-page" className="wrap">
             <div className="page-count">
