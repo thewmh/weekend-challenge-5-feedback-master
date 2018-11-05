@@ -14,8 +14,8 @@ class ThankYou extends Component {
 
           <div id="thankYou-page" className="wrap">
             <div>
-                Thank You!
-                <div><button onClick={this.handleClick}>Leave New Feedback</button></div>
+                <h1>Thank You!</h1>
+                <div><button className="ty-btn" onClick={this.handleClick}>Leave New Feedback</button></div>
               </div>
             </div>
         )

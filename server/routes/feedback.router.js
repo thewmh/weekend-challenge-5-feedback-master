@@ -5,7 +5,7 @@ const pool = require('../modules/pool');
 // GET all feedback that has been submitted, populate with data from the feedback database
 router.get('/', (req, res) => {
     // Find all feedback and return it
-    pool.query('SELECT * FROM "feedback";').then((result) => {
+    pool.query('SELECT * FROM feedback ORDER BY id DESC;').then((result) => {
         res.send(result.rows);
     }).catch((error) => {
         console.log('Error GET /feedback', error);
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
 
 });
 
-// DELETE an order
+// DELETE feedback
 router.delete('/:id', (req, res) => {
     pool.query('DELETE FROM "feedback" WHERE id=$1', [req.params.id]).then((result) => {
         res.sendStatus(200);
