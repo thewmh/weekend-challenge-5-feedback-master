@@ -2,6 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Feeling extends Component {
+
+    state = {
+        feeling: ''
+    }
+
+    handleClick = (event) => {
+        event.preventDefault();
+        console.log('in handleClick for feeling');
+        this.props.dispatch({type: 'ADD_FEELING', payload: this.state})
+    }
+
+    handleChange = (event) => {
+        console.log('in handleChange for feeling');
+        this.setState ({
+            ...this.state, feeling: event.target.value
+        });
+    }
     
     render() {
         return (
@@ -13,12 +30,12 @@ class Feeling extends Component {
             </div>
             <div id="feeling-card" className="card">
               <div id="feeling-form" className="form">
-                <form>
+                <form onSubmit={this.handleClick}>
                   <label>How are you feeling today?</label>
-                  <input />
+                  <input type="number" name="feeling" onChange={this.handleChange} value={this.state.feeling}/>
                 </form>
               </div>
-                <div><button>Next</button></div>
+                <div><button type="submit" value="submit" >Next</button></div>
               </div>
             </div>
         );
