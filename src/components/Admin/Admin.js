@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 
 class Admin extends Component {
 
@@ -43,25 +52,23 @@ class Admin extends Component {
 
     render() {
         return (
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                        <th>Feeling</th><th>Comprehension</th><th>Support</th><th>Comments</th><th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <Paper className="table">
+                <Table>
+                    <TableHead>
+                        <TableRow>
+                        <TableCell>Feeling</TableCell><TableCell>Comprehension</TableCell><TableCell>Support</TableCell><TableCell>Comments</TableCell><TableCell>Delete</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
                         {this.props.reduxState.getFeedbackReducer.map(feedback => (
-                            <tr key={feedback.id}>
-                            <td>{feedback.feeling}</td><td>{feedback.understanding}</td><td>{feedback.support}</td><td>{feedback.comments}</td><td><button onClick={() => { this.deleteFeedback(feedback.id)}}>DELETE</button></td>
-                            </tr>
+                            <TableRow key={feedback.id}>
+                            <TableCell>{feedback.feeling}</TableCell><TableCell>{feedback.understanding}</TableCell><TableCell>{feedback.support}</TableCell><TableCell>{feedback.comments}</TableCell><TableCell><Button onClick={() => { this.deleteFeedback(feedback.id)}}>DELETE<DeleteIcon fontSize="large" />
+</Button></TableCell>
+                            </TableRow>
                         ))}
-                        <tr>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    </TableBody>
+                </Table>
+            </Paper>
         );
     }
 }

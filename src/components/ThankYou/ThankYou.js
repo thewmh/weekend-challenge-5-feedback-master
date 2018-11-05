@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 class ThankYou extends Component {
 
@@ -15,7 +16,7 @@ class ThankYou extends Component {
           <div id="thankYou-page" className="wrap">
             <div>
                 <h1>Thank You!</h1>
-                <div><button className="ty-btn" onClick={this.handleClick}>Leave New Feedback</button></div>
+                <div><Button className="ty-btn" onClick={this.handleClick}>Leave New Feedback</Button></div>
               </div>
             </div>
         )

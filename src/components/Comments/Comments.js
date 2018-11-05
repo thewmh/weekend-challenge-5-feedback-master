@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
+
 
 class Comments extends Component {
 
@@ -50,10 +53,10 @@ class Comments extends Component {
             <form onSubmit={this.handleClick}>
               <div id="comments-form" className="form">
                   <label>Any Comments you want to leave?</label>
-                  <input type="text" name="comments" placeholder="Please enter a comment or 'no comment' if you have none" required onChange={this.handleChange} value={this.state.feeling}/>
+                  <Input type="text" name="comments" placeholder="Please enter a comment or 'no comment' if you have none" required onChange={this.handleChange} value={this.state.feeling}/>
                   </div>
             <div className="btn">
-                <button type="submit">Submit!</button>
+                <Button type="submit">Submit!</Button>
             </div>
             </form>
             </div>

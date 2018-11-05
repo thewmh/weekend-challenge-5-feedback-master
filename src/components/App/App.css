@@ -71,9 +71,8 @@ input {
   font-size: large;
 }
 
-button {
+Button {
   border: none;
-  margin-left: 70%;
   font-size: 30px;
 }
 
@@ -88,7 +87,7 @@ button {
   background-color: #03764a;
 }
 
-table {
+.table {
   margin: 0 auto;
   text-align: left;
   width: 80%;

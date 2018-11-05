@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
+
 
 class Understanding extends Component {
 
@@ -33,10 +36,10 @@ class Understanding extends Component {
             <form onSubmit={this.handleClick}>
               <div id="understanding-form" className="form">
                   <label>How well are you understanding the content?</label>
-                  <input type="number" name="understanding" min="1" max="5" placeholder="Please enter a number 1-5" required onChange={this.handleChange} value={this.state.feeling}/>
+                  <Input type="number" name="understanding" min="1" max="5" placeholder="Please enter a number 1-5" required onChange={this.handleChange} value={this.state.feeling}/>
                   </div>
             <div className="btn">
-                <button type="submit">Next</button>
+                <Button type="submit">Next</Button>
             </div>
             </form>
             </div>
