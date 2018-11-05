@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
 
 class App extends Component {
   render() {
@@ -16,24 +17,7 @@ class App extends Component {
         <br/>
         <Feeling />
         <Understanding />
-          {/* START Page 3 */}
-          <div id="supported-page" className="wrap">
-            <div className="page-count">
-              3 of 4 pages
-              <div className="progress-bar">
-              </div>
-            </div>
-            <div id="supported-card" className="card">
-              <div id="supported-form" className="form">
-                <form>
-                  <label>How well are you being supported?</label>
-                  <input />
-                </form>
-              </div>
-                <div><button>Next</button></div>
-              </div>
-            </div>
-            {/* END Page 3 */}
+        <Support />
           {/* START Page 4 */}
           <div id="comments-page" className="wrap">
             <div className="page-count">
