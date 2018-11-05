@@ -2,7 +2,7 @@
 
 This simple feedback form can be used for any project to collect daily feedback from whomever you are working with! It has basic styling applied, but can be modified as needed.
 
-There is a basic route that will lead a user back to the beginning and an admin page that can be viewed at:
+There is a basic route that will lead a user back to the beginning and an admin page that (once installation and setup are complete) can be viewed at:
 
 (http://localhost:3000/#/admin)
 
