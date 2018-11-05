@@ -5,6 +5,8 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
+import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
@@ -18,24 +20,7 @@ class App extends Component {
         <Feeling />
         <Understanding />
         <Support />
-          {/* START Page 4 */}
-          <div id="comments-page" className="wrap">
-            <div className="page-count">
-              4 of 4 pages
-              <div className="progress-bar">
-              </div>
-            </div>
-            <div id="comments-card" className="card">
-              <div id="comments-form" className="form">
-                <form>
-                  <label>Any Comments you want to leave?</label>
-                  <input />
-                </form>
-              </div>
-                <div><button>Next</button></div>
-              </div>
-            </div>
-            {/* END Page 4 */}
+        <Comments />
           {/* START Page 5 */}
           <div id="thankYou-page" className="wrap">
             <div>
@@ -50,4 +35,6 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapReduxStateToProps = ( reduxState ) => ({ reduxState });
+  
+export default connect(mapReduxStateToProps)(App);
