@@ -10,7 +10,8 @@ class Support extends Component {
     handleClick = (event) => {
         event.preventDefault();
         console.log('in handleClick for support');
-        this.props.dispatch({type: 'ADD_SUPPORT', payload: this.state})
+        this.props.dispatch({type: 'ADD_SUPPORT', payload: this.state});
+        this.props.history.push('/4');
     }
 
     handleChange = (event) => {
@@ -32,12 +33,14 @@ class Support extends Component {
               <div id="support-form" className="form">
                 <form onSubmit={this.handleClick}>
                   <label>How well are you being supported?</label>
-                  <input type="number" name="support" onChange={this.handleChange} value={this.state.feeling}/>
+                  <input type="number" name="support" min="1" max="5" required onChange={this.handleChange} value={this.state.feeling}/>
+                  <div>
+                        <button type="submit">Next</button>
+                    </div>
                 </form>
               </div>
-                <div><button type="submit" value="submit" >Next</button></div>
-              </div>
             </div>
+          </div>
         );
     }
 }

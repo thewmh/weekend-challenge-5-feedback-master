@@ -17,10 +17,14 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br/>
-        <Feeling />
-        <Understanding />
-        <Support />
-        <Comments />
+        <Router>
+          <div>
+        <Route exact path='/' component={Feeling} />
+        <Route path='/2' component={Understanding} />
+        <Route path='/3' component={Support} />
+        <Route path='/4' component={Comments} />
+          </div>
+        </Router>
           {/* START Page 5 */}
           <div id="thankYou-page" className="wrap">
             <div>

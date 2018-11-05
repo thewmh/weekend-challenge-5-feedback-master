@@ -12,6 +12,7 @@ class Comments extends Component {
         event.preventDefault();
         console.log('in handleClick for comments');
         this.props.dispatch({type: 'ADD_COMMENTS', payload: this.state});
+        this.props.history.push('/5');
         this.sendFeedback();
     }
 
@@ -49,12 +50,14 @@ class Comments extends Component {
               <div id="comments-form" className="form">
                 <form onSubmit={this.handleClick}>
                   <label>Any Comments you want to leave?</label>
-                  <input type="text" name="comments" onChange={this.handleChange} value={this.state.feeling}/>
+                  <input type="text" name="comments" required onChange={this.handleChange} value={this.state.feeling}/>
+                  <div>
+                        <button type="submit">Submit!</button>
+                    </div>
                 </form>
               </div>
-                <div><button type="submit" value="submit">Submit!</button></div>
-              </div>
             </div>
+          </div>
         );
     }
 }

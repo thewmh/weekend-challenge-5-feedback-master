@@ -10,7 +10,8 @@ class Understanding extends Component {
     handleClick = (event) => {
         event.preventDefault();
         console.log('in handleClick for understanding');
-        this.props.dispatch({type: 'ADD_UNDERSTANDING', payload: this.state})
+        this.props.dispatch({type: 'ADD_UNDERSTANDING', payload: this.state});
+        this.props.history.push('/3');
     }
 
     handleChange = (event) => {
@@ -32,12 +33,14 @@ class Understanding extends Component {
               <div id="understanding-form" className="form">
                 <form onSubmit={this.handleClick}>
                   <label>How well are you understanding the content?</label>
-                  <input type="number" name="understanding" onChange={this.handleChange} value={this.state.feeling}/>
+                  <input type="number" name="understanding" min="1" max="5" required onChange={this.handleChange} value={this.state.feeling}/>
+                  <div>
+                        <button type="submit">Next</button>
+                    </div>
                 </form>
               </div>
-                <div><button type="submit" value="submit" >Next</button></div>
-              </div>
             </div>
+          </div>
         );
     }
 }

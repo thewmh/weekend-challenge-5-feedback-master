@@ -10,7 +10,8 @@ class Feeling extends Component {
     handleClick = (event) => {
         event.preventDefault();
         console.log('in handleClick for feeling');
-        this.props.dispatch({type: 'ADD_FEELING', payload: this.state})
+        this.props.dispatch({type: 'ADD_FEELING', payload: this.state});
+        this.props.history.push('/2');
     }
 
     handleChange = (event) => {
@@ -32,12 +33,14 @@ class Feeling extends Component {
               <div id="feeling-form" className="form">
                 <form onSubmit={this.handleClick}>
                   <label>How are you feeling today?</label>
-                  <input type="number" name="feeling" onChange={this.handleChange} value={this.state.feeling}/>
+                  <input type="number" name="feeling" min="1" max="5" required onChange={this.handleChange} value={this.state.feeling}/>
+                    <div>
+                        <button type="submit">Next</button>
+                    </div>
                 </form>
               </div>
-                <div><button type="submit" value="submit" >Next</button></div>
-              </div>
             </div>
+          </div>
         );
     }
 }
