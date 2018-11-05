@@ -33,7 +33,12 @@ const feedbackReducer = (state=emptyState, action) => {
             state.comments = action.payload.comments
             break;
         case 'EMPTY_STATE':
-            state = emptyState
+            state = {
+                feeling: 0,
+                understanding: 0,
+                support: 0,
+                comments: ''
+            }
             break;
         default:
             return state;

@@ -47,15 +47,15 @@ class Comments extends Component {
               </div>
             </div>
             <div id="comments-card" className="card">
+            <form onSubmit={this.handleClick}>
               <div id="comments-form" className="form">
-                <form onSubmit={this.handleClick}>
                   <label>Any Comments you want to leave?</label>
-                  <input type="text" name="comments" required onChange={this.handleChange} value={this.state.feeling}/>
-                  <div>
-                        <button type="submit">Submit!</button>
-                    </div>
-                </form>
-              </div>
+                  <input type="text" name="comments" placeholder="Please enter a comment or 'no comment' if you have none" required onChange={this.handleChange} value={this.state.feeling}/>
+                  </div>
+            <div className="btn">
+                <button type="submit">Submit!</button>
+            </div>
+            </form>
             </div>
           </div>
         );

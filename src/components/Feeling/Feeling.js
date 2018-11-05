@@ -30,15 +30,15 @@ class Feeling extends Component {
               </div>
             </div>
             <div id="feeling-card" className="card">
+            <form onSubmit={this.handleClick}>
               <div id="feeling-form" className="form">
-                <form onSubmit={this.handleClick}>
                   <label>How are you feeling today?</label>
-                  <input type="number" name="feeling" min="1" max="5" required onChange={this.handleChange} value={this.state.feeling}/>
-                    <div>
-                        <button type="submit">Next</button>
-                    </div>
-                </form>
+                  <input type="number" name="feeling" min="1" max="5" placeholder="Please enter a number 1-5" required onChange={this.handleChange} value={this.state.feeling}/>
               </div>
+            <div className="btn">
+                <button type="submit">Next</button>
+            </div>
+            </form>
             </div>
           </div>
         );

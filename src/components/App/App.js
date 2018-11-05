@@ -6,6 +6,7 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import ThankYou from '../ThankYou/ThankYou';
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -23,17 +24,9 @@ class App extends Component {
         <Route path='/2' component={Understanding} />
         <Route path='/3' component={Support} />
         <Route path='/4' component={Comments} />
+        <Route path='/5' component={ThankYou} />
           </div>
         </Router>
-          {/* START Page 5 */}
-          <div id="thankYou-page" className="wrap">
-            <div>
-                Thank You!
-                <div><button>Leave New Feedback</button></div>
-              </div>
-            </div>
-            {/* END Page 5 */}
-
       </div>
     );
   }

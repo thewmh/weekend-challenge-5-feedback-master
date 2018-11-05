@@ -30,15 +30,15 @@ class Understanding extends Component {
               </div>
             </div>
             <div id="understanding-card" className="card">
+            <form onSubmit={this.handleClick}>
               <div id="understanding-form" className="form">
-                <form onSubmit={this.handleClick}>
                   <label>How well are you understanding the content?</label>
-                  <input type="number" name="understanding" min="1" max="5" required onChange={this.handleChange} value={this.state.feeling}/>
-                  <div>
-                        <button type="submit">Next</button>
-                    </div>
-                </form>
-              </div>
+                  <input type="number" name="understanding" min="1" max="5" placeholder="Please enter a number 1-5" required onChange={this.handleChange} value={this.state.feeling}/>
+                  </div>
+            <div className="btn">
+                <button type="submit">Next</button>
+            </div>
+            </form>
             </div>
           </div>
         );
