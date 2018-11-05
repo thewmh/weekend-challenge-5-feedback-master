@@ -25,23 +25,23 @@ const theme = createMuiTheme({
 const ranges = [
     {
       value: '1',
-      label: '1',
+      label: 'Where am I?',
     },
     {
       value: '2',
-      label: '2',
+      label: 'I understand very little',
     },
     {
       value: '3',
-      label: '3',
+      label: 'I understand that I don\'t understand ',
     },
     {
         value: '4',
-        label: '4',
+        label: 'My understanding is at an acceptable level',
       },
       {
         value: '5',
-        label: '5',
+        label: 'There is nothing I don\'t know',
       },
   ];
 
@@ -73,7 +73,7 @@ class Understanding extends Component {
         return (
           <Card id="understanding-page" className="wrap">
             <Typography className="page-count">
-              2 of 4 pages
+              <h2>2 of 4 pages</h2>
               <div className="progress-bar">
               </div>
             </Typography>

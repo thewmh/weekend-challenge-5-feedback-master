@@ -25,23 +25,23 @@ const theme = createMuiTheme({
 const ranges = [
     {
       value: '1',
-      label: '1',
+      label: 'Extremely bad!',
     },
     {
       value: '2',
-      label: '2',
+      label: 'Not too great.',
     },
     {
       value: '3',
-      label: '3',
+      label: 'Neither good nor bad.',
     },
     {
         value: '4',
-        label: '4',
+        label: 'Pretty good!',
       },
       {
         value: '5',
-        label: '5',
+        label: 'Immeasurably great.',
       },
   ];
 
