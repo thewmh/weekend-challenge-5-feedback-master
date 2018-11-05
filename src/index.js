@@ -18,7 +18,7 @@ const emptyState = {
 }
 
 const getFeedbackReducer = (state=[ ], action) => {
-    console.log('In Get Feedback Reducer');
+    // console.log('In Get Feedback Reducer');
     if (action.type === 'GET_FEEDBACK') {
         state = action.payload;
     }

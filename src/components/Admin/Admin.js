@@ -17,7 +17,7 @@ class Admin extends Component {
         // GET Feedback from the server
         axios.get('/feedback') 
           .then( (response) => {
-              console.log('getting Feedback from server', response.data);
+            //   console.log('getting Feedback from server', response.data);
               this.props.dispatch( {type: 'GET_FEEDBACK', payload: response.data} );
           })
           .catch( (error) => {
