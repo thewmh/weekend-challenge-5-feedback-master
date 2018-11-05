@@ -1,3 +1,8 @@
+.wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .App {
   text-align: center;
 }
@@ -15,5 +20,21 @@
 
 .App-intro {
   font-size: large;
+}
+
+button {
+  border: none;
+  margin-left: 70%;
+}
+
+.page-count {
+  padding: 20px;
+}
+
+.progress-bar {
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+  background-color: #03764a;
 }
 

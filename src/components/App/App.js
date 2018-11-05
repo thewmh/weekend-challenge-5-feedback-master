@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import Feeling from '../Feeling/Feeling';
 
 class App extends Component {
   render() {
@@ -11,26 +13,9 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br/>
-          {/* START Page 1 */}
-          <div id="feeling-page">
-            <div className="page-count">
-              1 of 4 pages
-              <div className="progress-bar">
-              </div>
-            </div>
-            <div id="feeling-card" className="card">
-              <div id="feeling-form" className="form">
-                <form>
-                  <label>How are you feeling today?</label>
-                  <input />
-                </form>
-              </div>
-                <div><button>Next</button></div>
-              </div>
-            </div>
-            {/* END Page 1 */}
+        <Feeling />
           {/* START Page 2 */}
-          <div id="understanding-page">
+          <div id="understanding-page" className="wrap">
             <div className="page-count">
               2 of 4 pages
               <div className="progress-bar">
@@ -48,7 +33,7 @@ class App extends Component {
             </div>
             {/* END Page 2 */}
           {/* START Page 3 */}
-          <div id="supported-page">
+          <div id="supported-page" className="wrap">
             <div className="page-count">
               3 of 4 pages
               <div className="progress-bar">
@@ -66,7 +51,7 @@ class App extends Component {
             </div>
             {/* END Page 3 */}
           {/* START Page 4 */}
-          <div id="comments-page">
+          <div id="comments-page" className="wrap">
             <div className="page-count">
               4 of 4 pages
               <div className="progress-bar">
@@ -84,14 +69,14 @@ class App extends Component {
             </div>
             {/* END Page 4 */}
           {/* START Page 5 */}
-          <div id="thankYou-page">
+          <div id="thankYou-page" className="wrap">
             <div>
                 Thank You!
                 <div><button>Leave New Feedback</button></div>
               </div>
             </div>
             {/* END Page 5 */}
-            
+
       </div>
     );
   }
