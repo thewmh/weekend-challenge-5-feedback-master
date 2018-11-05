@@ -85,7 +85,6 @@ class Feeling extends Component {
                   <TextField select label="" required onChange={this.handleChange} value={this.state.feeling}>{ranges.map(option => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}</TextField>
               </div>
             <CardActions className="btn"><MuiThemeProvider theme={theme}>
-
                 <Button type="submit">Next</Button></MuiThemeProvider>
             </CardActions>
             </form>
