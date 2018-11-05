@@ -17,6 +17,14 @@ const emptyState = {
     comments: ''
 }
 
+const getFeedbackReducer = (state=[ ], action) => {
+    console.log('In Get Feedback Reducer');
+    if (action.type === 'GET_FEEDBACK') {
+        state = action.payload;
+    }
+    return state;
+}
+
 // reducer with switch for cases
 const feedbackReducer = (state=emptyState, action) => {
     switch (action.type) {
@@ -51,7 +59,7 @@ const feedbackReducer = (state=emptyState, action) => {
 
 const storeInstance = createStore(
     combineReducers({
-        feedbackReducer
+        feedbackReducer, getFeedbackReducer
     }),
     applyMiddleware(logger)
 )

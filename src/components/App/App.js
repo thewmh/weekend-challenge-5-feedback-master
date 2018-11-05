@@ -7,6 +7,7 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import ThankYou from '../ThankYou/ThankYou';
+import Admin from '../Admin/Admin';
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
         <Route path='/3' component={Support} />
         <Route path='/4' component={Comments} />
         <Route path='/5' component={ThankYou} />
+        <Route path='/admin' component={Admin} />
           </div>
         </Router>
       </div>
